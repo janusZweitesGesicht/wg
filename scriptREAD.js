@@ -89,24 +89,32 @@ function copyCode(button) {
 		}, 1500);
 	});
 }
-
-function randomBlink() {
-	const path1 = document.getElementById('path1');
-	const path2 = document.getElementById('path2');
-
-	// Анимация мигания
-	path1.style.opacity = '0';
-	path2.style.opacity = '1';
+//мигание
+function animateBlinkGroup(groupClass) {
+	const first = document.querySelector(`.${groupClass}.blink-first`);
+	const second = document.querySelector(`.${groupClass}.blink-second`);
+	const blinkDuration = 300;
+	first.style.opacity = '0';
+	second.style.opacity = '1';
 
 	setTimeout(() => {
-		path1.style.opacity = '1';
-		path2.style.opacity = '0';
-	}, 300); // Длительность мигания (0.3s)
-
-	// Случайный интервал до следующего мигания (3-10 секунд)
-	const nextTime = 3000 + Math.random() * 7000;
-	setTimeout(randomBlink, nextTime);
+		first.style.opacity = '1';
+		second.style.opacity = '0';
+		const nextDelay = 3000 + Math.random() * 7000;
+		setTimeout(() => animateBlinkGroup(groupClass), nextDelay);
+	}, blinkDuration);
 }
 
-// Запускаем первый раз через случайный интервал
-setTimeout(randomBlink, 3000 + Math.random() * 7000);
+// анимация для всех групп
+document.querySelectorAll('[class*="blink-group-"]').forEach((el) => {
+	const classList = el.classList;
+	const groupClass = Array.from(classList).find((c) =>
+		c.startsWith('blink-group-')
+	);
+
+	// таймер для каждой группы
+	if (groupClass) {
+		const initialDelay = 1000 + Math.random() * 5000;
+		setTimeout(() => animateBlinkGroup(groupClass), initialDelay);
+	}
+});
