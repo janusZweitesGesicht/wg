@@ -267,28 +267,28 @@ document.addEventListener('DOMContentLoaded', function () {
 				selectionTooltip = null;
 			}
 		}
-		//??? добавить толко для мобилки
-		// if (isMobileDevice()) {
-		document.addEventListener('selectionchange', function () {
-			const selection = window.getSelection();
-			const selectedText = selection.toString().trim();
+		//??? добавить толко для мобилки и для пк
+		if (isMobileDevice()) {
+			document.addEventListener('selectionchange', function () {
+				const selection = window.getSelection();
+				const selectedText = selection.toString().trim();
 
-			if (selectedText.length > 0) {
-				const range = selection.getRangeAt(0);
-				const rect = range.getBoundingClientRect();
+				if (selectedText.length > 0) {
+					const range = selection.getRangeAt(0);
+					const rect = range.getBoundingClientRect();
 
-				setTimeout(() => {
-					if (window.getSelection().toString().trim() === selectedText) {
-						showSelectionTooltip(selection, rect);
-					}
-				}, 500);
-			} else {
-				removeSelectionTooltip();
-			}
-		});
+					setTimeout(() => {
+						if (window.getSelection().toString().trim() === selectedText) {
+							showSelectionTooltip(selection, rect);
+						}
+					}, 500);
+				} else {
+					removeSelectionTooltip();
+				}
+			});
 
-		document.addEventListener('click', removeSelectionTooltip);
-		// }
+			document.addEventListener('click', removeSelectionTooltip);
+		}
 	}
 
 	document.addEventListener('selectionchange', function () {
