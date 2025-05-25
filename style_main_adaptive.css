@@ -1,0 +1,555 @@
+.responsive-img {
+	max-width: 40%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.book {
+	width: 240px;
+	height: 160px;
+	background: url('../img/front.jpg') no-repeat center center;
+	background-size: contain;
+	margin-bottom: 5px;
+}
+
+@media (max-width: 816px) {
+	body {
+		margin: 0;
+		padding: 0;
+		font-family: Arial, sans-serif;
+		background: linear-gradient(50deg, #0a8d43, #2575fc);
+		color: white;
+		background-attachment: fixed;
+	}
+
+	html,
+	body {
+		height: auto;
+		min-height: 100vh;
+	}
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		min-height: 100px;
+	}
+
+	main-content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		/* для адаптива лучше column */
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 20px;
+		position: relative;
+		overflow: hidden;
+		height: auto;
+		/* margin: 30px 0; */
+		padding: 0;
+		/* ← ключевой момент: нижний отступ */
+	}
+
+	.visual-content {
+		width: 100%;
+		padding: 10px 0;
+		overflow: visible;
+	}
+
+	.navigation-dots {
+		align-items: flex-start;
+		/* ← было center */
+		flex-direction: column;
+		text-align: Justify;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: flex-start;
+		gap: 20px;
+		padding: 20px;
+		top: 42%;
+
+		/* padding-left: 20px; */
+	}
+
+	.nav-text {
+		display: flex;
+		align-items: center;
+		/* Центрируем элементы по вертикали */
+		gap: 10px;
+		/* Отступ между иконкой и текстом */
+		white-space: nowrap;
+		/* Не позволяем тексту переноситься */
+		overflow: hidden;
+		/* Обрезаем текст, если он не помещается */
+		text-overflow: ellipsis;
+		/* Добавляем многоточие, если текст слишком длинный */
+		font-size: clamp(16px, 2vw, 20px);
+		/* Адаптивный размер текста */
+		color: white;
+	}
+
+	.nav-text .icon {
+		max-width: 24px;
+		/* Ограничиваем размер иконки */
+		max-height: 24px;
+	}
+
+	.popup {
+		position: fixed;
+		/* было: absolute */
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1000;
+	}
+
+	а header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		padding: 15px 20px;
+		background-color: rgba(0, 0, 0, 0.6);
+		border-radius: 20px;
+		position: relative;
+		z-index: 10;
+	}
+
+	.burger {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 30px;
+		height: 20px;
+		cursor: pointer;
+		gap: 5px;
+		transition: transform 0.3s ease;
+		margin-left: auto;
+		margin-right: 10px;
+		z-index: 1000;
+	}
+
+	.burger .line {
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		border-radius: 2px;
+		transition: all 0.3s ease;
+		transform-origin: center;
+	}
+
+	.burger.active .line:nth-child(1) {
+		transform: rotate(45deg) translate(5px, 5px);
+	}
+
+	.burger.active .line:nth-child(2) {
+		opacity: 0;
+	}
+
+	.burger.active .line:nth-child(3) {
+		transform: rotate(-45deg) translate(5px, -5px);
+	}
+
+	.nav-wrapper {
+		display: flex;
+	}
+
+	.nav-text {
+		white-space: normal;
+		/* Разрешим перенос */
+		overflow: visible;
+		/* Покажем весь текст */
+		text-overflow: unset;
+		/* Уберем многоточие */
+		max-width: unset;
+		/* Уберем ограничение ширины */
+		font-size: clamp(16px, 2vw, 20px);
+		/* Адаптивный размер */
+		text-align: left;
+		/* Выравнивание по левому краю */
+		flex-grow: 1;
+		flex: 1;
+		word-break: break-word;
+	}
+
+	.background-effects {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		pointer-events: none;
+		/* Чтобы не мешал клику */
+	}
+
+	.navigation-item {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+		/* Расстояние между иконкой и текстом */
+		flex-wrap: nowrap;
+		/* Не разрешаем переносить элементы */
+		margin-right: 5px;
+	}
+
+	.dot {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 2px solid white;
+		background-color: #2bcc70;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 2px 8px rgba(43, 204, 112, 0.5);
+		transition: box-shadow 0.3s ease;
+	}
+
+	.dot img {
+		max-width: 40px;
+		/* Ограничиваем размер иконки */
+		max-height: 40px;
+	}
+
+	@media screen and (max-width: 768px) {
+		.burger {
+			display: flex;
+		}
+
+		.nav-wrapper nav {
+			z-index: 999;
+			display: none;
+			flex-direction: column;
+			background-color: rgba(0, 0, 0, 0.9);
+			position: absolute;
+			top: 75px;
+			left: 0;
+			width: 100%;
+			padding: 20px 0;
+			border-radius: 20px;
+		}
+
+		.nav-wrapper nav.active {
+			display: flex;
+			z-index: 999;
+		}
+
+		nav ul {
+			flex-direction: column;
+			align-items: center;
+			gap: 20px;
+		}
+	}
+
+	.burger div {
+		width: 25px;
+		height: 3px;
+		background-color: white;
+		border-radius: 2px;
+	}
+
+	nav ul {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 20px;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	nav ul li {
+		text-transform: uppercase;
+		font-size: clamp(14px, 2.5vw, 18px);
+		font-weight: 600;
+	}
+
+	nav {
+		display: flex;
+		align-items: center;
+	}
+
+	.text-content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: left;
+		gap: 15px;
+		/* Расстояние между иконкой и текстом */
+		white-space: nowrap;
+		/* Запрещаем перенос текста */
+		overflow: hidden;
+		/* Обрезаем лишний текст */
+		text-overflow: ellipsis;
+		/* Добавляем многоточие */
+		overflow-wrap: break-word;
+		/* Если текст не помещается, позволяет переноситься по словам */
+		width: 100%;
+	}
+
+	.nav-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	h1 {
+		font-size: clamp(22px, 6vw, 38px);
+		margin: 0;
+		font-weight: 700;
+		line-height: 1.3;
+		max-width: 100%;
+		white-space: normal;
+	}
+
+	.subtitle {
+		font-size: clamp(16px, 3vw, 20px);
+		opacity: 0.9;
+		font-weight: 400;
+	}
+
+	.start-button {
+		margin: 0;
+		background-color: #2bcc70;
+		color: white;
+		border: none;
+		text-transform: uppercase;
+		cursor: pointer;
+		font-weight: bold;
+		box-shadow: 0 4px 6px rgba(43, 204, 112, 0.4);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		margin-bottom: 0px;
+		padding: 32px 64px;
+		/* больше отступов */
+		font-size: 32px;
+		/* крупнее текст */
+		border-radius: 80px;
+		/* можно чуть более округлой */
+	}
+
+	#readMoreBtn {
+		margin-top: 10px;
+		background-color: #2bcc70;
+		color: white;
+		border: none;
+		padding: 20px 48px;
+		/* увеличенный отступ */
+		font-size: 10px;
+		/* увеличенный текст */
+		width: 100%;
+		border-radius: 40px;
+		cursor: pointer;
+		font-weight: bold;
+		transition: background-color 0.3s ease;
+	}
+
+	.start-button:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 6px 8px rgba(43, 204, 112, 0.5);
+	}
+
+	.visual-content {
+		flex: 1 1 300px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25px;
+		padding: 0;
+		/* height: 50px; */
+		/* Установите ширину в 100% от родительского контейнера */
+		max-width: 1200px;
+		/* Установите максимальную ширину */
+	}
+
+	.navigation-dots {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		margin-top: 0px;
+	}
+
+	.navigation-item {
+		display: flex;
+		align-items: center;
+		gap: 15px;
+	}
+
+	.dot {
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: 2px solid white;
+		background-color: #2bcc70;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		box-shadow: 0 2px 8px rgba(43, 204, 112, 0.5);
+		transition: box-shadow 0.3s ease;
+	}
+
+	.dot:hover {
+		box-shadow: 0 0px 28px rgba(43, 204, 112, 0.5);
+	}
+
+	.nav-text {
+		font-size: clamp(16px, 3vw, 24px);
+		color: white;
+		text-decoration: none;
+		font-weight: 600;
+		position: relative;
+		cursor: pointer;
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 0% 2px;
+		transition: background-size 0.3s;
+		margin-right: 5px;
+		margin-left: 5px;
+	}
+
+	.nav-text:hover {
+		background-size: 100% 2px;
+	}
+
+	/* popup */
+	.popup {
+		display: none;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		max-width: 300px;
+		background-color: rgba(0, 0, 0, 0.9);
+		padding: 1rem;
+		border-radius: 20px;
+		z-index: 1000;
+	}
+
+	.popup-content {
+		text-align: center;
+	}
+
+	.close-btn {
+		position: absolute;
+		top: 10px;
+		right: 15px;
+		font-size: 24px;
+		cursor: pointer;
+		transition: 0.2s;
+	}
+
+	.close-btn:hover {
+		color: red;
+	}
+
+	.popup ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	.popup-link {
+		color: white;
+		text-decoration: none;
+		display: inline-block;
+		margin-bottom: 10px;
+		background-image: linear-gradient(currentColor, currentColor);
+		background-position: 0% 100%;
+		background-repeat: no-repeat;
+		background-size: 0% 1%;
+		transition: background-size 0.3s;
+	}
+
+	.popup-link:hover {
+		background-size: 100% 7%;
+	}
+
+	/* fractal */
+	#fractalTree {
+		position: absolute;
+		top: 150px;
+		/* или сколько нужно */
+		left: 0%;
+		width: 100%;
+		height: calc(100% - 150px);
+		/* уменьшаем высоту, чтобы не вылезало за экран */
+		z-index: -1;
+	}
+
+	.responsive-img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin: 0 auto;
+	}
+
+	/* Responsive */
+	@media (max-width: 768px) {
+		.nav-text {
+			font-size: clamp(14px, 3vw, 18px);
+			/* Уменьшаем размер текста */
+		}
+
+		.dot {
+			width: 50px;
+			height: 50px;
+		}
+
+		.navigation-dots {
+			flex-direction: column;
+			gap: 12px;
+			padding: 2px;
+		}
+
+		h1 {
+			font-size: 25px;
+			line-height: 1.4;
+			margin-top: 20px;
+			margin-bottom: 0px;
+		}
+
+		.subtitle {
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.start-button {
+			padding: 12px 24px;
+			font-size: 20px;
+			margin-top: 5px;
+		}
+
+		.dot {
+			width: 40px;
+			height: 40px;
+		}
+
+		.nav-text {
+			font-size: 18px;
+		}
+
+		h1 {
+			font-size: 25px;
+		}
+
+		.navigation-dots {
+			gap: 15px;
+		}
+	}
+
+	@media (min-width: 817px) {
+		.main-content {
+			flex-direction: row;
+		}
+	}
+}

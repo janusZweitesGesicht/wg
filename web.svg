@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 64 64" style="enable-background:new 0 0 64 64;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#ffffff;stroke-width:1.666;stroke-linecap:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#ffffff;stroke-width:1.666;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#ffffff;stroke-width:2.5;stroke-linecap:round;stroke-miterlimit:10;}
+	.st4{fill:none;stroke:#ffffff;stroke-width:1.2314;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#ffffff;stroke-width:1.1967;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<path class="st0" d="M51.2,47.8c-4.6,5.6-11.5,9.1-19.2,9.1c-11.8,0-21.6-7.9-24.2-18.8"/>
+<path class="st1" d="M51.2,47.8"/>
+<path class="st0" d="M55.9,38.1c-0.5,2.3-1.4,4.4-2.5,6.4"/>
+<path class="st0" d="M22.8,8.8c2.8-1.1,5.9-1.7,9.2-1.7c11.8,0,21.5,7.6,24.1,18.6"/>
+<path class="st0" d="M20.2,10"/>
+<path class="st0" d="M7.9,25.6c1.6-6.6,5.6-11.6,11.3-15"/>
+<path class="st1" d="M46,37.8c-1.6,9.6-7.1,17.3-14,18.7"/>
+<path class="st1" d="M32,7.6c6.9,1.4,12.4,9.1,14,18.7"/>
+<path class="st1" d="M32,37.8v18.7c-6.9-1.4-12.4-9-14-18.7"/>
+<path class="st1" d="M18,26.3C19.6,16.6,25,9,32,7.6v18.7"/>
+<path class="st1" d="M15.6,51.2c1.7-1.2,8-5.2,17.1-5c8.2,0.2,13.9,3.8,15.7,5"/>
+<path class="st1" d="M48.4,12.8c-1.7,1.2-8,5.2-17.1,5c-8.2-0.2-13.9-3.8-15.7-5"/>
+<path class="st2" d="M70.4,50.2"/>
+<image style="overflow:visible;" width="511" height="543" xlink:href="67B9F75B.jpg"  transform="matrix(0.3029 0 0 0.3029 -169.3516 -36.8601)">
+</image>
+<path class="st1" d="M56,38.1H8c-1.2,0-2.2-1-2.2-2.2v-7.7c0-1.2,1-2.2,2.2-2.2H56c1.2,0,2.2,1,2.2,2.2v7.7
+	C58.2,37.1,57.2,38.1,56,38.1z"/>
+<polyline class="st4" points="28,28.9 25.5,32 28,35.1 "/>
+<line class="st5" x1="32.9" y1="28.2" x2="31.1" y2="35.8"/>
+<polyline class="st4" points="36.1,35.1 38.7,32.1 36.1,28.9 "/>
+</svg>

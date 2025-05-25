@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Форум – Веб-графика и цифровые технологии</title>
+		<meta
+			name="description"
+			content="Форум для обсуждения веб-графики и её роли в цифровых технологиях. Обменивайтесь мнениями, задавайте вопросы и делитесь идеями."
+		/>
+		<meta
+			name="keywords"
+			content="форум, веб-графика, цифровые технологии, обсуждение, мультимедиа, веб-разработка"
+		/>
+		<meta name="robots" content="index, follow" />
+		<link rel="stylesheet" href="discussionStyle.css" />
+		<link rel="stylesheet" href="style_annotation_adaptive.css" />
+		<link rel="stylesheet" href="adaptive_discussion.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="burger" id="burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="nav-wrapper">
+					<nav>
+						<ul>
+							<li class="nav-style"><a href="main.html">Главная</a></li>
+							<li class="nav-style"><a href="annotation.html">Аннотация</a></li>
+							<li class="nav-style"><a href="about.html">Об авторе</a></li>
+							<li class="nav-style">
+								<a href="discussion.html">Обсуждение</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main class="forum">
+				<h1>Форум</h1>
+				<p>
+					Здесь вы можете делиться мыслями, задавать вопросы и обсуждать
+					материалы проекта.
+				</p>
+
+				<section class="forum-form">
+					<h2>Создать сообщение</h2>
+					<form id="postForm">
+						<input type="text" id="username" placeholder="Ваше имя" required />
+						<input type="hidden" id="replyTo" value="" />
+						<textarea
+							id="message"
+							placeholder="Ваше сообщение..."
+							rows="4"
+							required
+						></textarea>
+						<button class="buttonfx angleindouble" type="submit">
+							послать
+						</button>
+						<div id="errorMessage" class="error-message"></div>
+					</form>
+				</section>
+
+				<section class="forum-posts" id="forumPosts">
+					<h2>Сообщения</h2>
+					<div id="emptyMessage" class="empty-message">
+						Загрузка сообщений...
+					</div>
+				</section>
+			</main>
+		</div>
+
+		<script src="discussionWITHOTserver.js"></script>
+		<script src="adaptive_discussion.js"></script>
+	</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<link rel="icon" href="book_read_page.svg" type="image/x-icon" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Интерактивный курс по веб-графике: когнитивное восприятие, цифровая графика, веб-программирование и мультимедиа."
+		/>
+		<meta
+			name="keywords"
+			content="веб-графика, когнитивное восприятие, графика, веб-программирование, мультимедиа, цифровая графика"
+		/>
+		<meta name="robots" content="index, follow" />
+		<script type="application/ld+json">
+			<!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! дополнить !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			{
+				"@context": "https://schema.org",
+				"@type": "Course",
+				"name": "Веб-графика — Учебник визуальных технологий",
+				"description": "Интерактивный Учебник, охватывающий когнитивное восприятие, цифровую графику, веб-программирование и технологии мультимедиа.",
+				"provider": {
+					"@type": "Organization",
+					"name": "Факультет информационных технологий",
+					"url": "https://example.com"
+				},
+				"educationalCredentialAwarded": "Сертификат об окончании",
+				"inLanguage": "ru",
+				"url": "https://example.com/main.html"
+			}
+		</script>
+		<title>Веб-графика — Учебник визуальных технологий</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style_main_adaptive.css" />
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="burger" id="burger" onclick="toggleMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="nav-wrapper">
+					<nav>
+						<ul>
+							<li class="nav-style">
+								<a href="index.html" title="Главная страница">Главная</a>
+							</li>
+							<li class="nav-style">
+								<a href="annotation.html" title="Аннотация к проекту"
+									>Аннотация</a
+								>
+							</li>
+							<li class="nav-style">
+								<a href="about.html" title="Информация об авторе">Об авторе</a>
+							</li>
+							<li class="nav-style">
+								<a href="discussion.html" title="Обсуждение по теме"
+									>Обсуждение</a
+								>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main class="main-content">
+				<section class="text-content">
+					<h1>Веб-графика</h1>
+					<div>
+						<img src="3d_book1_.png" alt="Обложка" class="responsive-img" />
+					</div>
+					<div>
+						<button id="startButton" class="start-button">ЧИТАТЬ</button>
+					</div>
+				</section>
+				<aside class="visual-content">
+					<div class="navigation-dots">
+						<div class="navigation-item">
+							<div class="dot">
+								<img
+									class="kognitvka"
+									src="kognitvka.svg"
+									alt="Когнитивное восприятие"
+									loading="lazy"
+								/>
+							</div>
+							<div class="nav-text">Когнитивное восприятие</div>
+						</div>
+						<div class="navigation-item">
+							<div class="dot">
+								<img
+									class="grafik"
+									src="grafik.svg"
+									alt="Цифровая графика"
+									loading="lazy"
+								/>
+							</div>
+							<div class="nav-text">
+								Представление графики в цифровом формате
+							</div>
+						</div>
+						<div class="navigation-item">
+							<div class="dot">
+								<img
+									class="web"
+									id="ww"
+									src="web.svg"
+									alt="Веб-программирование"
+									loading="lazy"
+								/>
+							</div>
+							<div class="nav-text">Веб-программирование</div>
+						</div>
+						<div class="navigation-item">
+							<div class="dot">
+								<img
+									class="media"
+									src="media.svg"
+									alt="Мультимедиа технологии"
+									loading="lazy"
+								/>
+							</div>
+							<div class="nav-text">Мультимедиа</div>
+						</div>
+					</div>
+				</aside>
+				<div id="popup" class="popup">
+					<div class="popup-content">
+						<span class="close-btn" aria-label="Закрыть окно">&times;</span>
+						<h2 id="popup-title"></h2>
+						<ul id="popup-list"></ul>
+					</div>
+				</div>
+				<div class="background-effects">
+					<svg
+						id="fractalTree"
+						width="100%"
+						height="100%"
+						aria-hidden="true"
+					></svg>
+				</div>
+			</main>
+		</div>
+		<script src="script.js"></script>
+		<script src="fractTree.js"></script>
+		<script src="adaptive.js"></script>
+	</body>
+</html>

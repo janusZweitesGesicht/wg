@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Аннотация – Веб-графика и цифровые технологии</title>
+		<meta
+			name="description"
+			content="Проект, посвящённый веб-графике и её роли в цифровых технологиях. Основы восприятия, методы представления, инструменты веб-разработки и мультимедиа."
+		/>
+		<meta
+			name="keywords"
+			content="веб-графика, цифровые технологии, мультимедиа, веб-разработка, графика, визуализация"
+		/>
+		<meta name="robots" content="index, follow" />
+
+		<link rel="stylesheet" href="annotationStyle.css" />
+		<link rel="stylesheet" href="style_annotation_adaptive.css" />
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "WebPage",
+				"name": "Аннотация",
+				"description": "Проект, посвящённый веб-графике и её роли в цифровых технологиях. Рассматриваются восприятие графики, мультимедиа и веб-инструменты.",
+				"url": "https://example.com/annotation.html",
+				"inLanguage": "ru",
+				"mainEntity": {
+					"@type": "CreativeWork",
+					"about": ["веб-графика", "визуализация", "мультимедиа", "интерфейсы"]
+				}
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="burger" id="burger" onclick="toggleMenu()">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="nav-wrapper">
+					<nav>
+						<ul>
+							<li class="nav-style">
+								<a href="main.html" title="Главная страница">Главная</a>
+							</li>
+							<li class="nav-style">
+								<a href="annotation.html" title="Аннотация проекта"
+									>Аннотация</a
+								>
+							</li>
+							<li class="nav-style">
+								<a href="about.html" title="Об авторе проекта">Об авторе</a>
+							</li>
+							<li class="nav-style">
+								<a href="discussion.html" title="Обсуждение материалов"
+									>Обсуждение</a
+								>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main class="main-content">
+				<article class="text-content">
+					<h1>Аннотация</h1>
+					<div class="annotation">
+						<p>
+							Этот проект направлен на всестороннее изучение
+							<strong>веб-графики</strong>
+							и её значения в современных цифровых технологиях.
+						</p>
+						<p>
+							Мы исследуем, как графические технологии помогают передавать
+							информацию и улучшать взаимодействие с пользователями в интернете.
+						</p>
+					</div>
+					<section>
+						<p>В рамках работы рассматриваются следующие ключевые темы:</p>
+						<ul>
+							<li>Основы когнитивного восприятия графической информации</li>
+							<li>Методы представления графики в цифровом формате</li>
+							<li>Инструменты веб-программирования для работы с графикой</li>
+							<li>
+								Современные технологии мультимедиа и их применение в
+								веб-разработке
+							</li>
+						</ul>
+					</section>
+					<p>
+						Этот материал будет полезен студентам, веб-разработчикам, а также
+						всем, кто интересуется развитием цифровых технологий и графики.
+					</p>
+					<div>
+						<button id="startButton" class="start-button">ЧИТАТЬ</button>
+					</div>
+				</article>
+				<aside class="background-effects">
+					<svg id="fractalTree" width="100%" height="100%" loading="lazy"></svg>
+				</aside>
+			</main>
+		</div>
+		<script>
+			document.addEventListener('DOMContentLoaded', function () {
+				const burger = document.querySelector('.burger');
+				const nav = document.querySelector('.nav-wrapper nav');
+
+				burger.addEventListener('click', function () {
+					this.classList.toggle('active');
+					nav.classList.toggle('active');
+				});
+			});
+		</script>
+
+		<script src="fractTree.js"></script>
+		<script src="adaptive.js"></script>
+		<script src="adaptive_annotation.js"></script>
+	</body>
+</html>

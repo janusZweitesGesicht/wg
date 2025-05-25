@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Об авторе</title>
+		<link rel="stylesheet" href="aboutStyle.css" />
+		<link rel="stylesheet" href="style_annotation_adaptive.css" />
+		<link rel="stylesheet" href="adaptive_about.css" />
+
+		<!-- JSON-LD -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "Person",
+				"name": "Олег Сергеевич Киселевский",
+				"jobTitle": "Доцент",
+				"worksFor": {
+					"@type": "Organization",
+					"name": "БГУИР",
+					"department": "Кафедра Менеджмента"
+				},
+				"email": "mailto:kiselevski@bsuir.by",
+				"alumniOf": "БГУИР",
+				"description": "Кандидат технических наук, специалист в области цифровых технологий и веб-графики. Активно занимается интеграцией мультимедиа в образовательные процессы.",
+				"image": "https://example.com/img/chars/manager_smile_eyebrows.svg"
+			}
+		</script>
+	</head>
+
+	<body>
+		<div class="container">
+			<header>
+				<div class="burger" id="burger">
+					<div class="line"></div>
+					<div class="line"></div>
+					<div class="line"></div>
+				</div>
+				<div class="nav-wrapper">
+					<nav>
+						<ul>
+							<li class="nav-style"><a href="main.html">Главная</a></li>
+							<li class="nav-style"><a href="annotation.html">Аннотация</a></li>
+							<li class="nav-style"><a href="about.html">Об авторе</a></li>
+							<li class="nav-style">
+								<a href="discussion.html">Обсуждение</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+
+			<main class="main-content">
+				<article class="text-content">
+					<h1>Об авторе</h1>
+					<section class="author-profile">
+						<img
+							src="Kiselevsky_.png"
+							alt="Фото Киселевского Олега Сергеевича"
+							class="author-photo"
+							loading="lazy"
+						/>
+						<div class="author-info">
+							<h2>Киселевский Олег Сергеевич</h2>
+							<p><strong>Ученая степень:</strong> кандидат технических наук</p>
+							<p><strong>Должность:</strong> доцент</p>
+							<p><strong>Место работы:</strong> Кафедра Менеджмента, БГУИР</p>
+							<p>
+								<strong>Контакты:</strong>
+								<a href="mailto:kiselevski@bsuir.by">kiselevski@bsuir.by</a>
+							</p>
+						</div>
+					</section>
+					<section>
+						<p class="subtitle">О проекте и профессиональных интересах</p>
+						<p>
+							Олег Сергеевич активно занимается исследованием в области цифровых
+							технологий, веб-программирования и графических интерфейсов. Его
+							работа направлена на развитие методов эффективной визуализации
+							информации и интеграции мультимедиа в образовательные и
+							производственные процессы.
+						</p>
+					</section>
+				</article>
+				<div class="background-effects">
+					<svg
+						id="fractalTree"
+						width="100%"
+						height="100%"
+						aria-hidden="true"
+					></svg>
+				</div>
+			</main>
+		</div>
+
+		<script>
+			document.addEventListener('DOMContentLoaded', () => {
+				const burger = document.getElementById('burger');
+				const nav = document.querySelector('.nav-wrapper nav');
+
+				burger.addEventListener('click', () => {
+					burger.classList.toggle('active');
+					nav.classList.toggle('active');
+				});
+			});
+		</script>
+
+		<script src="fractDragon.js"></script>
+		<script src="adaptive.js"></script>
+		<script src="adaptive_about.js"></script>
+	</body>
+</html>
