@@ -1,0 +1,165 @@
+@media (max-width: 700px) {
+
+	.conversation {
+		margin-right: 10px;
+		margin-left: 0px;
+
+	}
+
+	.back-btn {
+		margin-left: 0px;
+	}
+
+	.highlight {
+		display: block;
+		font-family: 'Courier New', monospace;
+		font-family: 'Consolas', monospace;
+		color: hsl(227, 69%, 25%);
+		overflow: auto;
+	}
+
+	.reading_page {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+		background-color: rgb(240, 217, 178);
+		text-align: justify;
+		padding: 0 20px 0 20px;
+	}
+
+	.right-IMG,
+	.left-IMG {
+		float: none;
+		margin: 0 auto;
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	.chapter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		left: 0.5%;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: Arial, sans-serif;
+	}
+
+	.back-btn {
+		margin: 0 auto;
+		padding-bottom: 18px;
+		font-size: 50px;
+	}
+
+	.rightNav svg {
+		width: 20px;
+	}
+
+	.toggler-left {
+		margin: 0 9px 0 0;
+		font-size: 20px;
+	}
+
+	.toggler-right {
+		margin: 0 0 0 9px;
+		font-size: 15px;
+	}
+
+	.rightNav {
+		gap: 9px;
+	}
+
+	.notes_window {
+		width: 50%;
+	}
+
+	.reading_page.shifted {
+		margin-right: 50%;
+	}
+
+	html,
+	body {
+		font-size: 14px;
+		width: 100%;
+	}
+
+	header {
+		display: flex;
+		width: 100%;
+		justify-content: flex-start;
+	}
+
+	.nav {
+		margin-left: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 0px;
+		padding: 6px 8px;
+	}
+
+	.back-btn span {
+		font-size: 13px;
+		margin-top: 7px;
+		display: inline-block;
+	}
+
+	.chapter {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 8px;
+	}
+
+	.toggler-left,
+	.toggler-right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	.toggler-left a,
+	.toggler-right a {
+		font-size: 18px;
+		line-height: 1;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+	}
+
+	.toggler-right a {
+		margin-right: 15px;
+	}
+
+	.back-btn span {
+		font-size: 13px;
+		height: 0px;
+	}
+
+	section {
+		display: block;
+		unicode-bidi: isolate;
+		width: 100%;
+	}
+
+	.rightNav {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+	}
+
+	.chapterName span {
+		font-size: 12px;
+	}
+
+}

@@ -1,0 +1,72 @@
+.st0,
+.st1,
+.st2 {
+	fill: none;
+	stroke: #fff;
+	stroke-width: 2;
+	stroke-miterlimit: 10;
+}
+.st2 {
+	stroke-linecap: round;
+}
+
+circle {
+	stroke: #fff;
+}
+
+.conv {
+	stroke: #fff;
+}
+
+body.light-theme {
+	background-color: #fff;
+	color: #000;
+}
+
+body.light-theme header {
+	background: #eee;
+}
+
+body.light-theme a {
+	color: black;
+}
+
+body.light-theme .reading_page {
+	background-color: lightgray;
+}
+
+/* ________смена темы__________---- */
+
+body.light-theme .st0 {
+	stroke: #000000;
+}
+
+body.light-theme .st1 {
+	stroke: #000000;
+}
+
+body.light-theme circle {
+	stroke: #000000;
+}
+
+body.light-theme .bookmarkSVG {
+	stroke: #000000;
+}
+body.light-theme circle {
+	stroke: #000000;
+}
+body.light-theme .notebbb {
+	stroke: #000000;
+}
+
+body.light-theme .conv {
+	stroke: #000000;
+}
+
+/* .conversation path {
+	stroke: #000000;
+} */
+
+body.light-theme .back-btn {
+	color: #000;
+}
