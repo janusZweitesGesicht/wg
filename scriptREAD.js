@@ -7,13 +7,13 @@ window.addEventListener('scroll', () => {
 
 //назад
 document.querySelector('.back-btn').addEventListener('click', () => {
-	window.location.href = 'main.html';
+	window.location.href = 'index.html';
 });
 
 // Листание главы влево
 document.querySelector('.toggler-left a').addEventListener('click', (e) => {
 	e.preventDefault();
-	window.location.href = 'main.html';
+	window.location.href = 'index.html';
 });
 
 // Листание главы вправо

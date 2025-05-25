@@ -165,7 +165,7 @@
 					<article>
 						<section>
 							<p>
-								Язык гипе текстовой разметки
+								Язык гипертекстовой разметки
 								<dfn>HTML</dfn>
 								(от англ. <i lang="en">HyperText Markup Language</i>) – является
 								стандартным инструментом разметки страниц в интернете.
@@ -1391,9 +1391,50 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 										class="st1qqq"
 									/>
 									<path
-										d="M28.6 24.6v1.6M27.7 21.3l1.5-.2M26.6 22.3h0M38 22.3s-.5-1.2-2.6-1.1M35.9 24.6v1.6"
+										d="M28.6 24.6v1.6M27.7 21.3l1.5-.2M26.6 22.3h0M38 22.3s-.5-1.2-2.6-1.1"
 										class="st9qqq"
 									/>
+									<!-- 1st -->
+									<path
+										id="path1"
+										d="M35.9 24.6v1.6"
+										style="
+											stroke: #000;
+											stroke-linecap: round;
+											stroke-miterlimit: 10;
+										"
+									>
+										<animate
+											id="anim1"
+											attributeName="opacity"
+											values="1;0;1"
+											begin="indefinite"
+											dur="0.3s"
+											fill="freeze"
+										/>
+									</path>
+
+									<!-- Второй path (появляющийся) -->
+									<path
+										id="path2"
+										d="m34.9 25.3 1.3-.1.8.4"
+										style="
+											stroke: #000;
+											stroke-linecap: round;
+											stroke-linejoin: round;
+											stroke-miterlimit: 10;
+											opacity: 0;
+										"
+									>
+										<animate
+											id="anim2"
+											attributeName="opacity"
+											values="0;1;0"
+											begin="indefinite"
+											dur="0.3s"
+											fill="freeze"
+										/>
+									</path>
 								</svg>
 								<p class="ti">
 									Всё это интересно и познавательно. Но исторический сайт в

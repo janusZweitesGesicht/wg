@@ -486,7 +486,7 @@ small {
 /* !!! */
 @font-face {
 	font-family: 'AptosNarrow';
-	src: url('../fonts/Aptos Narrow.ttf') format('truetype');
+	src: url('Aptos Narrow.ttf') format('truetype');
 	font-style: normal;
 	font-weight: normal;
 }
