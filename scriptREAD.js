@@ -105,14 +105,12 @@ function animateBlinkGroup(groupClass) {
 	}, blinkDuration);
 }
 
-// анимация для всех групп
 document.querySelectorAll('[class*="blink-group-"]').forEach((el) => {
 	const classList = el.classList;
 	const groupClass = Array.from(classList).find((c) =>
 		c.startsWith('blink-group-')
 	);
 
-	// таймер для каждой группы
 	if (groupClass) {
 		const initialDelay = 1000 + Math.random() * 5000;
 		setTimeout(() => animateBlinkGroup(groupClass), initialDelay);

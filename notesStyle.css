@@ -141,3 +141,84 @@ header {
 	border-radius: 3px;
 	outline: 3px dashed #000000;
 }
+/* --------------------------------------------------------------- */
+.note-item {
+	margin: 10px 0;
+	padding: 10px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	background: white;
+	cursor: move;
+	transition: all 0.3s ease;
+}
+
+.note-item:hover {
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.note-content {
+	margin-bottom: 10px;
+	min-height: 20px;
+}
+
+.note-content[contenteditable='true'] {
+	border: 1px dashed #007bff;
+	padding: 5px;
+	outline: none;
+}
+
+.note-actions {
+	display: flex;
+	gap: 5px;
+	margin-top: 10px;
+}
+
+.note-actions button {
+	padding: 5px 10px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 12px;
+}
+
+.edit-btn,
+.save-btn {
+	background: #007bff;
+	color: white;
+}
+
+.delete-btn {
+	background: #dc3545;
+	color: white;
+}
+
+.cancel-btn {
+	background: #6c757d;
+	color: white;
+}
+
+.drag-placeholder {
+	height: 2px;
+	background: #007bff;
+	margin: 5px 0;
+	opacity: 0.7;
+}
+
+.selection-tooltip {
+	position: fixed;
+	background: #333;
+	color: white;
+	padding: 8px 16px;
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	z-index: 10000;
+	user-select: none;
+}
+
+@media (max-width: 768px) {
+	.selection-tooltip {
+		font-size: 16px;
+		padding: 12px 20px;
+	}
+}

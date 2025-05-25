@@ -1286,27 +1286,27 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 							</p>
 							<ul class="list-without">
 								<li>
-									<b><code> &lt;html&gt; и &lt;/html&gt</code>;</b> –
+									<b><code> &lt;html&gt; и &lt;/html&gt</code></b> –
 									соответственно открывающие и закрывающие сам HTML-документ;
 								</li>
 								<li>
-									<b><code> &lt;body&gt; и &lt;/body&gt</code>;</b> –
+									<b><code> &lt;body&gt; и &lt;/body&gt;</code></b> –
 									заключающие в себя непосредственно сам контент, выводящееся на
 									экран содержимое;
 								</li>
 								<li>
-									<b><code> &lt;title&gt и &lt;/title&gt</code></b> –
+									<b><code> &lt;title&gt; и &lt;/title&gt;</code></b> –
 									заключающие между собой тот заголовок, который обозначает
 									страницу во вкладке браузера;
 								</li>
 								<li>
-									<b><code>&lt;a&gt и &lt;/a&gt</code></b> – гиперссылка;
+									<b><code>&lt;a&gt; и &lt;/a&gt;</code></b> – гиперссылка;
 								</li>
 								<li>
-									<b><code>&lt;h1&gt и &lt;/h1&gt</code></b> – заголовок;
+									<b><code>&lt;h1&gt; и &lt;/h1&gt;</code></b> – заголовок;
 								</li>
 								<li>
-									<b><code>&lt;p&gt и &lt;/p&gt</code></b> – простой текст
+									<b><code>&lt;p&gt; и &lt;/p&gt;</code></b> – простой текст
 									параграфа.
 								</li>
 							</ul>
@@ -1315,8 +1315,8 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 							<p>
 								Некоторых тегов, привычных для современного сайта, в коде не
 								хватает потому, что их тогда ещё просто не придумали. Нет в нём
-								парного тега <code>&lt;style&gt</code> и
-								<code>&lt;/style&gt</code>, открывающего и закрывающего таблицу
+								парного тега <code>&lt;style&gt;</code> и
+								<code>&lt;/style&gt;</code>, открывающего и закрывающего таблицу
 								стилей CSS, но о ней позже.
 							</p>
 						</section>
@@ -1326,28 +1326,28 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								текста заголовком просто – достаточно поместить этот фрагмент
 								между открывающим тегом
 
-								<code>&lt;h1&gt</code> и закрывающим тегом
-								<code>&lt;/h1&gt</code> . Всего таких тегов в языке HTML шесть и
-								предназначены они для подзаголовков разных уровней. Текст,
-								помещённый между тегами <code>&lt;h2&gt</code> и
-								<code>&lt;/h2&gt</code> тоже будет выглядеть как заголовок, но
+								<code>&lt;h1&gt;</code> и закрывающим тегом
+								<code>&lt;/h1&gt;</code> . Всего таких тегов в языке HTML шесть
+								и предназначены они для подзаголовков разных уровней. Текст,
+								помещённый между тегами <code>&lt;h2&gt;</code> и
+								<code>&lt;/h2&gt;</code> тоже будет выглядеть как заголовок, но
 								меньшего размера, а текст, расположенный между тегами
-								<code>&lt;h6&gt</code> и <code>&lt;/h6&gt</code> будет вовсе
+								<code>&lt;h6&gt;</code> и <code>&lt;/h6&gt;</code> будет вовсе
 								маленьким, но при этом полужирным – то есть заголовком.
 							</p>
 							<p>
 								Также из кода становится понятно, как букву, слово или несколько
 								слов сделать гиперссылкой. Для этого слово нужно поместить между
-								тегами <code>&lt;a&gt</code> и <code>&lt;/a&gt</code>. Уже после
-								этого слово станет синими и подчёркнутым, как настоящая
+								тегами <code>&lt;a&gt;</code> и <code>&lt;/a&gt;</code>. Уже
+								после этого слово станет синими и подчёркнутым, как настоящая
 								гиперссылка. Но для того, чтобы эта гиперссылка пользователя
 								действительно куда-то перенаправляла, внутри тега
-								<code>&lt;a&gt</code>
+								<code>&lt;a&gt;</code>
 								нужно указать требуемый адрес, и делается это так:
 							</p>
 							<code class="highlight"
-								>&lt;a&gt
-								href=»http://info.cern.ch/hypertext/WWW/WhatIs.html»>link&lt;/a&gt</code
+								>&lt;a&gt;
+								href=»http://info.cern.ch/hypertext/WWW/WhatIs.html»>link&lt;/a&gt;</code
 							>
 							<p>
 								Только в этом случае появившееся в окне браузера синее
@@ -1775,20 +1775,20 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								свойства:
 							</p>
 
-							<pre class="prebg"><code class="highlight">      &lt;style&gt;
-                  h1 {
-                     font-size: 30pt;
-                     font-weight: bold;
-                     font-family: arial;
-                     color: green;
-                  }
-                  h2 {
-                     font-size: 22pt;
-                     font-weight: bold;
-                     font-family: arial;
-                     color: green;
-                  }
-      &lt;/style&gt;
+							<pre class="prebg"><code class="highlight">    &lt;style&gt;
+         h1 {
+            font-size: 30pt;
+            font-weight: bold;
+            font-family: arial;
+            color: green;
+         }
+         h2 {
+            font-size: 22pt;
+            font-weight: bold;
+            font-family: arial;
+            color: green;
+         }
+   &lt;/style&gt;
    </code></pre>
 							<button
 								class="copyBtn"
@@ -1800,11 +1800,11 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 						</section>
 						<section>
 							<p>Или проще:</p>
-							<pre class="prebg"><code class="highlight">      &lt;style&gt;
-            h1,h2{font-weight: bold;font-family: arial;color:green;}
-            h1{font-size: 30pt}                                                              
-            h2{font-size: 22pt}
-      &lt;/style&gt;</code></pre>
+							<pre class="prebg"><code class="highlight">    &lt;style&gt;
+         h1,h2{font-weight: bold;font-family: arial;color:green;}
+         h1{font-size: 30pt}                                                              
+         h2{font-size: 22pt}
+   &lt;/style&gt;</code></pre>
 							<button
 								class="copyBtn"
 								onclick="copyCode(this)"
@@ -1852,30 +1852,30 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 							</p>
 							<pre
 								class="prebg"
-							><code class="highlight">      &lt;html>                                                                                               
-         &lt;head&gt;
-            &lt;meta charset=»UTF-8»&gt;
-            &lt;title&gt;Мойсайт&lt;/title&gt;
-            &lt;style&gt;
-            &lt;/style&gt;
-         &lt;/head&gt;
-         &lt;body&gt;
-            &lt;h1&gt;Добро пожаловать на мою веб-страницу!&lt;/h1&gt;
-            &lt;h2&gt;Обо мне&lt;/h2&gt;
-            &lt;p&gt;Меня зовут Алекс, мне 17 лет и я изучаю веб-разработку.&lt;/
-            p&gt;
-            &lt;imgsrc=»myphoto.jpg» alt=»Здесь могло быть мое фото»&gt;
-            &lt;h2&gt;Мои увлечения&lt;/h2&gt;
-            &lt;p&gt;Я люблю программирование, путешествия и чтение книг.&lt;/p&gt;
-            &lt;h3&gt;Мои любимые книги:&lt;/h3&gt;
-            &lt;ul&gt;&lt;!--объявление ненумерованного списка --&gt;
-            &lt;li&gt;Красная&lt;/li&gt;
-            &lt;li&gt;Вторая&lt;/li&gt;
-            &lt;li&gt;Про кота&lt;/li&gt;
-            &lt;/ul&gt;
-            &lt;a href=»https://example.com»&gt;Посетите мой блог&lt;/a&gt;
-         &lt;/body&gt;
-      &lt;/html&gt;</code></pre>
+							><code class="highlight">    &lt;html>                                                                                               
+      &lt;head&gt;
+         &lt;meta charset=»UTF-8»&gt;
+         &lt;title&gt;Мойсайт&lt;/title&gt;
+         &lt;style&gt;
+         &lt;/style&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+         &lt;h1&gt;Добро пожаловать на мою веб-страницу!&lt;/h1&gt;
+         &lt;h2&gt;Обо мне&lt;/h2&gt;
+         &lt;p&gt;Меня зовут Алекс, мне 17 лет и я изучаю веб-разработку.&lt;/
+         p&gt;
+         &lt;imgsrc=»myphoto.jpg» alt=»Здесь могло быть мое фото»&gt;
+         &lt;h2&gt;Мои увлечения&lt;/h2&gt;
+         &lt;p&gt;Я люблю программирование, путешествия и чтение книг.&lt;/p&gt;
+         &lt;h3&gt;Мои любимые книги:&lt;/h3&gt;
+         &lt;ul&gt;&lt;!--объявление ненумерованного списка --&gt;
+         &lt;li&gt;Красная&lt;/li&gt;
+         &lt;li&gt;Вторая&lt;/li&gt;
+         &lt;li&gt;Про кота&lt;/li&gt;
+         &lt;/ul&gt;
+         &lt;a href=»https://example.com»&gt;Посетите мой блог&lt;/a&gt;
+      &lt;/body&gt;
+   &lt;/html&gt;</code></pre>
 							<button
 								class="copyBtn"
 								onclick="copyCode(this)"
@@ -1923,11 +1923,11 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								выполнен шрифтом Verdana:
 							</p>
 							<pre class="prebg"><code class="highlight">
-         body{
-            background-color: #c5b7c9;
-            padding: 50px;
-            font-family: 'Verdana';
-         }
+   body{
+      background-color: #c5b7c9;
+      padding: 50px;
+      font-family: 'Verdana';
+   }
                      </code></pre>
 							<button
 								class="copyBtn"
@@ -1941,11 +1941,11 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								буквами размером 32 пт и выровнен по центру страницы:
 							</p>
 							<pre class="prebg"><code class="highlight">
-         h1{
-            text-transform: uppercase;
-            font-size:32px;
-            text-align: center;
-         }  
+   h1{
+      text-transform: uppercase;
+      font-size:32px;
+      text-align: center;
+   }  
                      </code></pre>
 							<button
 								class="copyBtn"
@@ -1960,11 +1960,11 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								межстрочным интервалом:
 							</p>
 							<pre class="prebg"><code class="highlight">
-         h2,h3{
-            font-size:24pt;
-            font-weight: normal;
-            line-height:.3;
-         }
+   h2,h3{
+      font-size:24pt;
+      font-weight: normal;
+      line-height:.3;
+   }
                      </code></pre>
 							<button
 								class="copyBtn"
@@ -1979,11 +1979,11 @@ anonymous FTP&lt;/a&gt;, etc.&lt;/dd&gt;&lt;/dl&gt;
 								шрифтом Cambria величиной 14 пт:
 							</p>
 							<pre class="prebg"><code class="highlight">
-         p,ul,li,a{
-            font-family: cambria;
-            font-size:14pt;
-            font-style:italic;
-         }
+   p,ul,li,a{
+      font-family: cambria;
+      font-size:14pt;
+      font-style:italic;
+   }
                      </code></pre>
 							<button
 								class="copyBtn"
