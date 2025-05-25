@@ -1,0 +1,255 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background: linear-gradient(50deg, #0a8d43, #2575fc);
+	color: white;
+	background-attachment: fixed;
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+header {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	padding: 15px 0;
+	background-color: rgba(0, 0, 0, 0.6);
+	border-radius: 20px;
+	position: relative;
+}
+
+nav {
+	position: relative;
+	left: 4%;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	gap: 30px;
+}
+
+nav ul li {
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.nav-style a {
+	color: white;
+	text-decoration: none;
+	background-image: linear-gradient(currentColor, currentColor);
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-size: 0% 1%;
+	transition: background-size 0.3s;
+}
+
+.nav-style a:hover {
+	background-size: 100% 7%;
+}
+
+.forum {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.forum h1,
+.forum h2 {
+	text-align: center;
+}
+
+.forum-form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	/* Добавлено */
+	margin-top: 30px;
+	padding: 15px;
+	background-color: #f9f9f9;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forum-form h2 {
+	color: #007acc;
+}
+
+.forum-form input,
+.forum-form textarea {
+	width: 90%;
+	margin: 10px 0;
+	padding: 10px;
+	font-size: 1em;
+	border-radius: 8px;
+	border: 1px solid #ccc;
+	resize: none;
+	transition: 0.1s;
+}
+
+textarea:focus,
+input:focus {
+	transition: 0.1s;
+	outline: solid #007acc;
+}
+
+.forum-posts {
+	margin-top: 40px;
+}
+
+.post {
+	width: 100%;
+	background: #fff;
+	padding: 15px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+	transition: transform 0.2s;
+}
+
+.post:hover {
+	transform: translateY(-2px);
+}
+
+.post h3 {
+	margin: 0;
+	color: #007acc;
+}
+
+.post-date {
+	font-size: 0.8em;
+	color: #666;
+	margin-top: 5px;
+}
+
+.post-actions {
+	margin-top: 10px;
+}
+
+.post-actions button {
+	background: none;
+	border: none;
+	color: #666;
+	cursor: pointer;
+	margin-right: 10px;
+	font-size: 0.9em;
+}
+
+.post-actions button:hover {
+	color: #007acc;
+}
+
+.post p {
+	color: black;
+}
+
+.empty-message {
+	text-align: center;
+	color: #666;
+	padding: 20px;
+}
+
+.error-message {
+	color: red;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.reply {
+	margin-left: 30px;
+	margin-top: -15px;
+	border-left: 3px solid #007acc;
+	padding-left: 10px;
+}
+
+.reply-username {
+	color: #007acc;
+	font-weight: bold;
+}
+
+@media (max-width: 600px) {
+	.forum {
+		padding: 10px;
+	}
+}
+
+/* ----кнопочка */
+
+.forum-form button {
+	border-radius: 20px;
+	color: #007acc;
+	background: transparent;
+	border: 1px solid #007acc;
+	border-bottom: 4px solid #007acc;
+	padding: 10px 20px;
+	font: bold 16px 'Bitter', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.0625em;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	cursor: pointer;
+	transition: color 0.5s;
+	margin: 10px auto;
+	display: block;
+}
+
+.forum-form button::before,
+.forum-form button::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 150%;
+	height: 100%;
+	background: #007acc;
+	/* Цвет фона при наведении */
+	z-index: -1;
+	transition: transform 0.5s;
+}
+
+.forum-form button::before {
+	left: 0;
+	transform-origin: 0 bottom;
+	transform: translateX(-100%) rotate(-30deg);
+}
+
+.forum-form button::after {
+	right: 0;
+	transform-origin: right bottom;
+	transform: translateX(100%) rotate(30deg);
+}
+
+.forum-form button:hover {
+	color: white;
+}
+
+.forum-form button:hover::before {
+	transform: rotate(0deg);
+}
+
+.forum-form button:hover::after {
+	transform: rotate(0deg);
+}
+
+.delete-btn {
+	background-color: #ff4d4d;
+	color: white;
+	border: none;
+	padding: 5px 10px;
+	margin-left: 5px;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+.delete-btn:hover {
+	background-color: #cc0000;
+}
