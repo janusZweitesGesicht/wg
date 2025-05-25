@@ -1,0 +1,143 @@
+.notebook-open {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 40%;
+	height: 100%;
+	background-color: #fff;
+	color: black;
+	padding: 20px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+	z-index: 10;
+	display: block;
+	transition: margin-left 0.3s ease;
+}
+
+.notes_window {
+	position: fixed;
+	top: 50px;
+	right: 0;
+	width: 40%;
+	height: calc(100% - 50px);
+	background-color: #f0e6d2;
+	color: black;
+	padding: 20px;
+	box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+	transform: translateX(100%);
+	transition: transform 0.3s ease;
+	z-index: 9;
+	overflow-y: auto;
+}
+
+.notes_window.active {
+	transform: translateX(0);
+}
+
+.reading_page {
+	transition: margin-right 0.3s ease;
+}
+
+.notes span {
+	text-align: justify;
+}
+
+/* !!! */
+.reading_page.shifted {
+	margin-right: 40%;
+}
+
+.notes_window #text {
+	padding: 0 5%;
+	transition: margin-left 0.3s ease;
+}
+
+.notes {
+	height: 100%;
+	width: 100%;
+	transition: margin-left 0.3s ease;
+}
+
+.Zametki {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+/* --scrollbar-- */
+
+.notes_window {
+	overflow-y: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
+.notes_window::-webkit-scrollbar {
+	display: none;
+}
+
+.notes {
+	overflow: visible;
+	max-height: none;
+}
+
+.note-separator {
+	height: 1px;
+	background-color: #ccc;
+	margin: 15px 0;
+	border: none;
+}
+
+.noteItem p {
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+/* ----- */
+.note {
+	position: relative;
+	transition: opacity 0.3s ease;
+}
+
+.note-separator {
+	height: 1px;
+	background: #ddd;
+	margin: 10px 0;
+}
+
+.noteItem {
+	padding: 8px;
+	margin: 5px 0;
+}
+
+.noteItem {
+	/* padding: 10px; */
+	margin: 8px 0;
+	background: white;
+	border-radius: 4px;
+	word-wrap: break-word;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.noteItem img {
+	max-width: 100%;
+	display: block;
+}
+/* 
+body *:not(.reading_page *) {
+	user-select: none;
+	-webkit-user-drag: none;
+} */
+header {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+
+.notes_window {
+	user-select: none;
+	-webkit-user-drag: none;
+}
+/* ------ */
+[contenteditable='true'] {
+	border-radius: 3px;
+	outline: 3px dashed #000000;
+}
