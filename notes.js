@@ -15,6 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		notesWindow.classList.toggle('active');
 		readingPage.classList.toggle('shifted');
 	});
+	document.addEventListener('keydown', function (event) {
+		if ((event.ctrlKey && event.key === 'Q') || event.key === 'q') {
+			console.log(1);
+
+			notesWindow.classList.toggle('active');
+			readingPage.classList.toggle('shifted');
+		}
+	});
 
 	function loadNotesFromStorage() {
 		try {
