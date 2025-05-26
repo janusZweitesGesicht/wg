@@ -51,17 +51,17 @@ document.addEventListener('DOMContentLoaded', function () {
 			noteEl.innerHTML = `
                 <div class="note-content" contenteditable="false">${note.content}</div>
                 <div class="note-actions" style="display: none;">
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                    <button class="save-btn" style="display: none;">Save</button>
-                    <button class="cancel-btn" style="display: none;">Cancel</button>
+                    <button class="edit-btn">Редактировать</button>
+                    <button class="delete-btn">Удалить</button>
+                    <button class="save-btn" style="display: none;">Сохранить</button>
+                    <button class="cancel-btn" style="display: none;">Отмена</button>
                 </div>
             `;
 		} else if (note.type === 'image') {
 			noteEl.innerHTML = `
                 <div class="note-content">${note.content}</div>
                 <div class="note-actions" style="display: none;">
-                    <button class="delete-btn">Delete</button>
+                    <button class="delete-btn">Удалить</button>
                 </div>
             `;
 		}
@@ -232,13 +232,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		function showSelectionTooltip(selection, rect) {
 			removeSelectionTooltip();
-
+			// line 241 +70
 			selectionTooltip = document.createElement('div');
 			selectionTooltip.className = 'selection-tooltip';
-			selectionTooltip.innerHTML = 'Add to notes';
+			selectionTooltip.innerHTML = 'Добавить в заметки';
 			selectionTooltip.style.cssText = `
                 position: fixed;
-                top: ${rect.top - 40}px;
+                top: ${rect.top - 40 + 70}px;
                 left: ${rect.left + rect.width / 2 - 50}px;
                 background: #333;
                 color: white;
